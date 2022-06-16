@@ -24,3 +24,17 @@
     - Deviler content to end users with lower latency
 
 ## IAM and AWS CLI
+IAM is a global service
+### Users, groups and policies
+- IAM: Identity and Access Management
+- Root user is created by default
+    - Shouldn't be used or shared
+- Users are people in the organization, can be inside groups
+- Groups contain users only, not groups
+- Users are not required to be in a group
+- Users can be in multiple groups
+
+#### IAM Permissions
+- Users and groups are assigned JSON policies
+- Policies describe permissions (allow actions)
+- Alway provide the **least privilage principal**, no more permissions that the ones needed
