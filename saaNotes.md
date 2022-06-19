@@ -1,7 +1,7 @@
 # AWS Solution Architect Associate study notes
 **TABLE OF CONTENTS**
-[AWS Global Infrastructure](#aws-global-infrastructurehttpsawsamazoncomabout-awsglobal-infrastructureregionsaz)
-[IAM and AWS CLI](#iam-and-aws-cli)
+1. [AWS Global Infrastructure](#aws-global-infrastructurehttpsawsamazoncomabout-awsglobal-infrastructureregionsaz)
+2. [IAM and AWS CLI](#iam-and-aws-cli)
 
 
 ## [AWS Global Infrastructure](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/)
