@@ -2,6 +2,7 @@
 **TABLE OF CONTENTS**
 1. [AWS Global Infrastructure](#aws-global-infrastructurehttpsawsamazoncomabout-awsglobal-infrastructureregionsaz)
 2. [IAM and AWS CLI](#iam-and-aws-cli)
+3. [EC2](#ec2)
 
 
 ## [AWS Global Infrastructure](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/)
@@ -130,6 +131,16 @@ CLI and SDKs use access key for authentication.
 - Use to interact with AWS resources via command line
 - Direct access to public AWS APIs for the services
 - Useful to develop scripts to manage resources
+- After installation in linux, windows or mac, to configure use
+    - ``` aws configure ```
+        - To grant access to the account need access key and secret access
+ 
+ **AWS CloudShell**
+- CloudShell is a browser based cli interface
+- It uses the user from which you are logged in to the management console
+- Is not available for all regions
+- Some storage is available hence can upload and download files
+- Files are not deleted when the cli is closed
 
 **[AWS SDK](https://aws.amazon.com/tools/)**
 - Software Development Kit
@@ -139,3 +150,47 @@ CLI and SDKs use access key for authentication.
     - SDKs(Javascript, Python, Java, C++, Go, Node.js, PHP, .NET, Ruby)
     - Mobile SDKs (Android, iOS)
     - IoT SDK (Embedded C, Arduino)
+
+### IAM Roles for services
+- Roles for services are use to provide AWS services to access other services
+- IAM roles defines what permissions the service has against the other service
+
+### IAM Security Tools
+**IAM Credential Report**
+- Use at an Account Level
+- Report that list all the users in the account and shows the status of the credentials
+- Is a CSV based report
+
+**IAM Access Advisor**
+- User level report
+- Shows the service permissions of a user and when were those last accessed
+- Useful to revise the policies (always apply least privilige)
+
+## EC2
+
+EC2 stands for Elastic Compute which is a IaaS service. Is use to build virtual machines.
+Capabilities:
+- Rent virtual machines (EC2)
+- Store data on virtual machines drives (EBS)
+- Distribute load across virtual machines (ELB)
+- Scale services by using auto scaling groups (ASG)
+
+**EC2 sizing and configuration**
+EC2 instances are composed of:
+- Operating System
+- Compute (CPU)
+- Memory (RAM)
+- Storage:
+    - Network attach using EBS or EFS
+    - Hardware (EC2 instance store)
+- Network card: Speed and public IP
+- Firewall rules via *Security groups*
+- Bootstrap script using EC2 User data
+
+**EC2 User data**
+- Use to run scripts only once at the the instance first start
+- Can be use to:
+    - Install updates
+    - install software
+    - Download files from internet
+- ec2 user data scripts are run as root user
