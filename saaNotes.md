@@ -194,3 +194,56 @@ EC2 instances are composed of:
     - install software
     - Download files from internet
 - ec2 user data scripts are run as root user
+
+
+**EC2 instances types**
+
+Defines the type of resource specification of the instances.
+
+Syntax is:
+```m4.2xlarge```
+m: instance class
+4: generation
+2xlarge: size within the instance class
+
+This are the instance classes:
+- General purpose
+    - Define by the letters (M, T, A)
+    - For diversity of workloads such as web servers
+    - Has balance between cpu, memory and networking
+- Compue Optimized:
+    - Defined by the letters (C, H)
+    - Use for compute intensive task that needs high performance CPU like:
+        - Batch processing
+        - Gaming servers
+        - Media transcoding
+        - High performance web servers
+        - High performance computing (HPC)
+        - Machine learning
+- Memory Optimized:
+    - Defined by the letters (R, X, Z)
+    - Fast performance for in-memory workloads
+    - Use cases:
+        - High performance relational and non-relational databases
+        - Web cache store
+        - In-memory datases optimized for BI (business intelligence)
+        - Apps that perform real time processing of big unstructure data
+
+- Storage Optimized:
+    - Defined with letters (I, D, H)
+    - Great for storage instensive tasks with high sequential read and write access of large data sets to local storage
+    - Use cases:
+        - High frequency online transaction processing (OLTP) systems
+        - Relational and NoSQL databases
+        - Cache for inmemory databases (such as Redis)
+        - Data wareshouse apps
+        - Distributed file systems
+
+**Security Groups and Classic ports**
+- Act like a firewall for EC2 instances
+- Allow traffic for inbund and outbound directions
+- Security groups can belong to multiple instances
+- EC2 instances can have multiple security groups
+- Only allow rules
+- Can allow traffic from other security groups
+- Are attach to a region
