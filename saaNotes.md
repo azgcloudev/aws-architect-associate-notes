@@ -247,3 +247,19 @@ This are the instance classes:
 - Only allow rules
 - Can allow traffic from other security groups
 - Are attach to a region
+
+**SSH**
+Allows to connect to linux servers to their command line.
+- SSH from Linux or MAC:
+    - ```bash
+        chmod 400 <key-file.pem> #in case you get unprotected private key file
+        ssh -i <username>@<ip-address>
+        ```
+- SSH from windows
+    - If the private key format is .pem then use the putty key generator to convert it to .ppk
+        - With putty ssh using the .ppk key
+    - From windows 10 and above can use the CMD or PowerShell to login via CLI:
+        ```powershell
+            ssh -i <key-file.pem> <username>@<ip-address>
+        ```
+        - If access error need to disable administrator rights and assign permissions only to your windows user
